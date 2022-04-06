@@ -1,0 +1,19 @@
+$primary-color:#9356DC;
+$secondary-color:#FF79DA;
+$tertiary-color:#99E2D0;
+
+header {
+    height: 65px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  0 2px 3px 0 rgba(0, 0, 0, 0.3) ;
+    
+    i::before {
+        display:none;
+    }
+
+    img {
+        height: 27px;
+    }
+}

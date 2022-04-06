@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "## Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChuckBDT/OC-03-OhMyFood.git"
+  },
+  "author": "Charles Boudrant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChuckBDT/OC-03-OhMyFood/issues"
+  },
+  "homepage": "https://github.com/ChuckBDT/OC-03-OhMyFood#readme"
+}

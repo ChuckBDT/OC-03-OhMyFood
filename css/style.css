@@ -1,0 +1,15 @@
+header {
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+}
+header i::before {
+  display: none;
+}
+header img {
+  height: 27px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/64d32e4329.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="favicon.png">
     <title>OhMyFood | Home</title>
@@ -16,27 +14,27 @@
 <body>
 
     <header>
-        <i class="fas fa-arrow-left"></i>
+        <i class="fa-solid fa-arrow-left"></i>
         <img src="assets/logos/ohmyfood.png"><img>
     </header>
 
     <section id="functioning">
         <h2>Fonctionnement</h2>
         <div class="functioning__steps">
-            <div class="step">
-                <p>1</p>
-                <i class="fa-solid fa-mobile-screen-button"></i>
-                <p>Choisissez un restaurant</p>
+            <div class="step-btn">
+                <p class="step-btn__order">1</p>
+                <i class="step-btn__icon fa-solid fa-mobile-screen-button"></i>
+                <p class="step-btn__text">Choisissez un restaurant</p>
             </div>
-            <div class="step">
-                <p>2</p>
-                <i class="fa-solid fa-list-ul"></i>
-                <p>Composez votre menu</p>
+            <div class="step-btn">
+                <p class="step-btn__order">2</p>
+                <i class="step-btn__icon fa-solid fa-list-ul"></i>
+                <p class="step-btn__text">Composez votre menu</p>
             </div>
-            <div class="step">
-                <p>3</p>
-                <i class="fa-solid fa-store"></i>
-                <p>Dégustez au restaurant</p>
+            <div class="step-btn">
+                <p class="step-btn__order">3</p>
+                <i class="step-btn__icon fa-solid fa-store"></i>
+                <p class="step-btn__text">Dégustez au restaurant</p>
             </div>
         </div>
     </section>
@@ -93,8 +91,8 @@
     <footer>
         <div class="logo">ohmyfood</div>
         <ul>
-            <li>Proposer un restaurant</li>
-            <li>Devenir partenaire</li>
+            <li><i class="fa-solid fa-utensils"></i> Proposer un restaurant</li>
+            <li><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</li>
             <li>Mentions légales</li>
             <li>Contact</li>
         </ul>

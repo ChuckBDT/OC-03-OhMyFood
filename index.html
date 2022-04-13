@@ -14,10 +14,20 @@
 <body>
 
     <header>
-        <i class="fa-solid fa-arrow-left"></i>
+        <i class="header__arrow--hidden fa-solid fa-arrow-left"></i>
         <img src="assets/logos/ohmyfood.png"><img>
     </header>
+    <div class="banner">
+        <div class="location">
 
+            <p><i class="fa-solid fa-location-dot"></i>Paris, Belleville</p>
+        </div>
+        <div class="discover">
+            <h2>Réservez le menu qui vous convient</h2>
+            <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+            <button class="discover__btn gradient-rounded-btn">Explorer nos restaurants</button>
+        </div>
+    </div>
     <section id="functioning">
         <h2>Fonctionnement</h2>
         <div class="functioning__steps">
@@ -42,19 +52,19 @@
     <section id="places">
         <h2>Restaurants</h2>
         <div class="places__list">
-            <div class="restaurant">
-                <span>Nouveau</span>
+            <div class="restaurant rounded-shadowed-tile">
+                <span class="span-lightcolor-tile">Nouveau</span>
                 <img src="assets/restaurants/LaPaletteDuGout.jpg" alt=""></img>
                 <div class="restaurant__content">
                     <div>
                         <h3>La palette du goût</h3>
                         <p>Ménilmontant</p>
                     </div>
-                    <i class="fa-regular fa-heart"></i>
+                    <img id="clipping" src="./assets/svg/heart.svg" alt="">
                 </div>
             </div>
-            <div class="restaurant">
-                <span>Nouveau</span>
+            <div class="restaurant rounded-shadowed-tile">
+                <span class="span-lightcolor-tile">Nouveau</span>
                 <img src="assets/restaurants/LaNoteEnchantee.jpg" alt=""></img>
                 <div class="restaurant__content">
                     <div>
@@ -64,8 +74,8 @@
                     <i class="fa-regular fa-heart"></i>
                 </div>
             </div>
-            <div class="restaurant">
-                <span>Nouveau</span>
+            <div class="restaurant rounded-shadowed-tile">
+                <span class="span-lightcolor-tile--hidden">Nouveau</span>
                 <img src="assets/restaurants/ALaFrancaise.jpg" alt=""></img>
                 <div class="restaurant__content">
                     <div>
@@ -75,8 +85,8 @@
                     <i class="fa-regular fa-heart"></i>
                 </div>
             </div>
-            <div class="restaurant">
-                <span>Nouveau</span>
+            <div class="restaurant rounded-shadowed-tile">
+                <span class="span-lightcolor-tile--hidden">Nouveau</span>
                 <img src="assets/restaurants/LeDeliceDesSens.jpg" alt=""></img>
                 <div class="restaurant__content">
                     <div>
@@ -94,7 +104,7 @@
             <li><i class="fa-solid fa-utensils"></i> Proposer un restaurant</li>
             <li><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</li>
             <li>Mentions légales</li>
-            <li>Contact</li>
+            <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
         </ul>
     </footer>
 </body>

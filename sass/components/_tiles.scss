@@ -1,0 +1,22 @@
+@use "../utils/mixins"as mix;
+@use "../utils/variables"as var;
+
+.rounded-shadowed-tile {
+    height: 200px;
+    width: 200px;
+    background: white;
+    border-radius: var.$tile-border-radius;
+    @include mix.btn-shadow;
+}
+
+.span-lightcolor-tile {
+    padding: 7px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 3px;
+    @include mix.light-back-dark-font;
+
+    &--hidden {
+        display: none;
+    }
+}

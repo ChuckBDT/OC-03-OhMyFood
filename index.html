@@ -7,19 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/64d32e4329.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="./favicon.png">
     <title>OhMyFood | Home</title>
 </head>
 
 <body>
 
     <header>
-        <i class="header__arrow--hidden fa-solid fa-arrow-left"></i>
+        <i class="header__arrow--hidden fa-slid fa-arrow-left"></i>
         <img src="assets/logos/ohmyfood.png"><img>
     </header>
     <div class="banner">
         <div class="location">
-
             <p><i class="fa-solid fa-location-dot"></i>Paris, Belleville</p>
         </div>
         <div class="discover">
@@ -52,58 +51,95 @@
     <section id="places">
         <h2>Restaurants</h2>
         <div class="places__list">
-            <div class="restaurant rounded-shadowed-tile">
-                <span class="span-lightcolor-tile">Nouveau</span>
-                <img src="assets/restaurants/LaPaletteDuGout.jpg" alt=""></img>
-                <div class="restaurant__content">
-                    <div>
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
-                    </div>
-                    <img id="clipping" src="./assets/svg/heart.svg" alt="">
+            <a href="./lapalettedugout.html">
+                <div class="restaurant rounded-shadowed-tile">
+                    <span class="span-lightcolor-tile">Nouveau</span>
+                    <img src="assets/restaurants/LaPaletteDuGout.jpg" alt=""></img>
+                    <div class="restaurant__content">
+                        <div class="restaurant-title">
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+            </a>
+            <div class=" like-btn">
+                <div class="like-btn__main">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="like-btn__background">
+                    <i class="fa-regular fa-heart"></i>
                 </div>
             </div>
+        </div>
+        </div>
+        <a href="./lanoteechantee.html">
             <div class="restaurant rounded-shadowed-tile">
                 <span class="span-lightcolor-tile">Nouveau</span>
                 <img src="assets/restaurants/LaNoteEnchantee.jpg" alt=""></img>
                 <div class="restaurant__content">
-                    <div>
+                    <div class="restaurant-title">
                         <h3>La note enchantée</h3>
                         <p>Charonne</p>
                     </div>
-                    <i class="fa-regular fa-heart"></i>
-                </div>
+        </a>
+        <div class=" like-btn">
+            <div class="like-btn__main">
+                <i class="fa-solid fa-heart"></i>
             </div>
+            <div class="like-btn__background">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+        </div>
+        </div>
+        </div>
+        <a href="./alafrancaise.html">
             <div class="restaurant rounded-shadowed-tile">
                 <span class="span-lightcolor-tile--hidden">Nouveau</span>
                 <img src="assets/restaurants/ALaFrancaise.jpg" alt=""></img>
                 <div class="restaurant__content">
-                    <div>
+                    <div class="restaurant-title">
                         <h3>À la française</h3>
                         <p>Cité Rouge</p>
                     </div>
-                    <i class="fa-regular fa-heart"></i>
-                </div>
+        </a>
+        <div class=" like-btn">
+            <div class="like-btn__main">
+                <i class="fa-solid fa-heart"></i>
             </div>
+            <div class="like-btn__background">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+        </div>
+        </div>
+        </div>
+        <a href="./ledelicedessens.html">
             <div class="restaurant rounded-shadowed-tile">
                 <span class="span-lightcolor-tile--hidden">Nouveau</span>
                 <img src="assets/restaurants/LeDeliceDesSens.jpg" alt=""></img>
                 <div class="restaurant__content">
-                    <div>
+                    <div class="restaurant-title">
                         <h3>Le délice des sens</h3>
                         <p>Folie-Méricourt</p>
                     </div>
-                    <i class="fa-regular fa-heart"></i>
-                </div>
+        </a>
+        <div class=" like-btn">
+            <div class="like-btn__main">
+                <i class="fa-solid fa-heart"></i>
             </div>
+            <div class="like-btn__background">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+        </div>
+        </div>
+
+        </div>
         </div>
     </section>
     <footer>
         <div class="logo">ohmyfood</div>
         <ul>
-            <li><i class="fa-solid fa-utensils"></i> Proposer un restaurant</li>
-            <li><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</li>
-            <li>Mentions légales</li>
+            <li><i class="fa-solid fa-utensils"></i><a href="#"> Proposer un restaurant</a></li>
+            <li><i class="fa-solid fa-handshake-angle"></i><a href="#"> Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
             <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
         </ul>
     </footer>

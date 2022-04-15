@@ -1,0 +1,32 @@
+@use "../utils/variables" as var;
+
+footer {
+  width: auto;
+  height: 200px;
+  padding: 0 1.5em;
+  background-color: var.$main-color--d2;
+  color: white;
+
+  .logo {
+    font-family: "Shrikhand";
+    font-size: 18px;
+    padding: 25px 0;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    height: 95px;
+    justify-content: space-between;
+    i {
+      width: 20px;
+      font-size: 13px;
+    }
+    a {
+      text-decoration: none;
+      &:link {
+        color:inherit;
+      }
+    }
+  }
+}

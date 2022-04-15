@@ -9,3 +9,10 @@ $main-color--d2: darken($main-color, 74%);
 
 $tile-border-radius: 15px;
 $tile-img-height: 170px;
+
+$grad-prim-to-secon-color: linear-gradient($primary-color, $secondary-color);
+$grad-secon-to-prim-color: linear-gradient($secondary-color, $primary-color);
+
+$lighten-percent: 3%;
+$grad-prim-to-secon-color-lighter: linear-gradient(lighten($primary-color, $lighten-percent), lighten($secondary-color, $lighten-percent));
+$grad-secon-to-prim-color-lighter: linear-gradient(lighten($secondary-color, $lighten-percent), lighten($primary-color, $lighten-percent));

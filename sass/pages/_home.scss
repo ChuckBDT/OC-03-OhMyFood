@@ -9,12 +9,27 @@
     height: 50px;
     background-color: var.$main-color--d1;
     color: var.$main-color--d2;
-
     @include mix.flex(center, center);
 
-    p {
-      font-size: 16px;
+    input {
+      background-color: var.$main-color--d1;
+      color: var.$main-color--d2;
       font-weight: 500;
+      border-style: none;
+      text-align: center;
+      width: 150px;
+
+      &::placeholder {
+        color: var.$main-color--d2;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &[type="search"]::-webkit-search-cancel-button {
+        display: none;
+      }
     }
   }
 
@@ -36,7 +51,7 @@
 }
 
 #functioning {
-  padding: 50px 20px;
+  padding: 50px 20px 30px 20px;
 
   .functioning__steps {
     height: 265px;
@@ -53,10 +68,10 @@
   padding: 50px 20px 30px 20px;
 
   .places__list {
-    margin: 20px 0;
+    margin: 10px 0 20px 0;
     @include mix.flex(center, center);
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 10px;
 
     a {
       text-decoration: none;
@@ -64,8 +79,6 @@
 
   }
 }
-
-
 
 .restaurant {
   width: 100%;
@@ -128,7 +141,7 @@
 
         &:hover {
           cursor: pointer;
-          background-image: url("../../assets/png/wave.png");
+          background-image: url("../assets/png/wave.png");
           -moz-background-clip: text;
           -o-background-clip: text;
           -webkit-background-clip: text;

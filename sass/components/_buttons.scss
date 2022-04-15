@@ -10,6 +10,7 @@
   @include mix.btn-shadow;
   border-radius: 20px;
   background-color: var.$main-color;
+  line-height: normal;
 
   &__order {
     height: 25px;
@@ -35,7 +36,7 @@
     @include mix.flex(start, center);
     flex: 0.8;
     height: 100%;
-    line-height: normal;
+
     font-weight: 500;
   }
 
@@ -49,11 +50,16 @@
 }
 
 .gradient-rounded-btn {
-  background-image: linear-gradient(var.$secondary-color, var.$primary-color);
+  background-image: var.$grad-secon-to-prim-color;
   color: white;
   @include mix.btn-shadow;
   border: none;
   outline: none;
   font-weight: 500;
   border-radius: 25px;
+
+  &:hover {
+    background-image: var.$grad-secon-to-prim-color-lighter;
+    @include mix.btn-shadow-darken;
+  }
 }

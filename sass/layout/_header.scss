@@ -7,11 +7,6 @@ header {
   position: relative;
   z-index: 2;
 
-
-  .header__arrow--hidden::before {
-    display: none;
-  }
-
   img {
     height: 27px;
   }

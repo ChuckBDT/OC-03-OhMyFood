@@ -213,8 +213,12 @@ template {
 /* ==================== End of normalize.css ==================== */
 * {
   font-family: "Roboto";
-  margin: 0;
-  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
 }
 
 p {
@@ -230,9 +234,6 @@ header {
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 2;
-}
-header .header__arrow--hidden::before {
-  display: none;
 }
 header img {
   height: 27px;
@@ -264,8 +265,11 @@ footer ul i {
 footer ul a {
   text-decoration: none;
 }
+footer ul a:visited {
+  color: #e9e9e9;
+}
 footer ul a:link {
-  color: inherit;
+  color: white;
 }
 
 .step-btn {
@@ -274,9 +278,10 @@ footer ul a:link {
   display: flex;
   justify-content: start;
   align-items: center;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   background-color: #f6f6f6;
+  line-height: normal;
 }
 .step-btn__order {
   height: 25px;
@@ -306,7 +311,6 @@ footer ul a:link {
   align-items: center;
   flex: 0.8;
   height: 100%;
-  line-height: normal;
   font-weight: 500;
 }
 .step-btn:hover {
@@ -319,11 +323,15 @@ footer ul a:link {
 .gradient-rounded-btn {
   background-image: linear-gradient(#ff79da, #9356dc);
   color: white;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   border: none;
   outline: none;
   font-weight: 500;
   border-radius: 25px;
+}
+.gradient-rounded-btn:hover {
+  background-image: linear-gradient(#ff88de, #9b63df);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .rounded-shadowed-tile {
@@ -331,7 +339,7 @@ footer ul a:link {
   width: 200px;
   background: white;
   border-radius: 15px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .span-lightcolor-tile {
@@ -358,9 +366,22 @@ footer ul a:link {
   justify-content: center;
   align-items: center;
 }
-.banner .location p {
-  font-size: 16px;
+.banner .location input {
+  background-color: #e9e9e9;
+  color: #393939;
   font-weight: 500;
+  border-style: none;
+  text-align: center;
+  width: 150px;
+}
+.banner .location input::placeholder {
+  color: #393939;
+}
+.banner .location input:focus {
+  outline: none;
+}
+.banner .location input[type=search]::-webkit-search-cancel-button {
+  display: none;
 }
 .banner .discover {
   height: 210px;
@@ -380,7 +401,7 @@ footer ul a:link {
 }
 
 #functioning {
-  padding: 50px 20px;
+  padding: 50px 20px 30px 20px;
 }
 #functioning .functioning__steps {
   height: 265px;
@@ -396,12 +417,12 @@ footer ul a:link {
   padding: 50px 20px 30px 20px;
 }
 #places .places__list {
-  margin: 20px 0;
+  margin: 10px 0 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 10px;
 }
 #places .places__list a {
   text-decoration: none;
@@ -459,7 +480,7 @@ footer ul a:link {
 }
 .restaurant__content .like-btn__main:hover {
   cursor: pointer;
-  background-image: url("../../assets/png/wave.png");
+  background-image: url("../assets/png/wave.png");
   -moz-background-clip: text;
   -o-background-clip: text;
   -webkit-background-clip: text;

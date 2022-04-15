@@ -7,16 +7,15 @@
 }
 
 @mixin btn-shadow {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.20);
+}
+
+@mixin btn-shadow-darken {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.30);
 }
 
 @mixin step-icon-color {
   color: darken(var.$main-color, 50%);
-}
-
-@mixin light-back-dark-font ($color: var.$tertiary-color) {
-  background-color: $color;
-  color: darken($color, 45%);
 }
 
 @mixin step-btn-hover {
@@ -24,4 +23,9 @@
   $satu: saturation(var.$primary-color);
   $hsl: lightness(var.$main-color);
   background-color: hsl($hue, $satu, $hsl);
+}
+
+@mixin light-back-dark-font ($color: var.$tertiary-color) {
+  background-color: $color;
+  color: darken($color, 45%);
 }

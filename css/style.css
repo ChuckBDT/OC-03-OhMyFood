@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
   line-height: 1.15;
@@ -328,6 +329,10 @@ footer ul a:link {
   outline: none;
   font-weight: 500;
   border-radius: 25px;
+  height: 50px;
+  width: 220px;
+  margin: 20px 0;
+  cursor: pointer;
 }
 .gradient-rounded-btn:hover {
   background-image: linear-gradient(#ff88de, #9b63df);
@@ -354,6 +359,34 @@ footer ul a:link {
   display: none;
 }
 
+/* ==================== Like Button Animation ==================== */
+@keyframes wave-animation {
+  0% {
+    background-position: 0 bottom;
+  }
+  100% {
+    background-position: 150px bottom;
+  }
+}
+@keyframes loading-animation {
+  0% {
+    background-size: 40px 0px;
+  }
+  100% {
+    background-size: 150px 80px;
+  }
+}
+/* ====================   Menu Animations   ==================== */
+@keyframes SlideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .banner {
   position: relative;
   z-index: 1;
@@ -454,29 +487,21 @@ footer ul a:link {
   justify-content: space-between;
   align-items: center;
 }
-.restaurant__content p {
-  font-size: 17px;
-}
-.restaurant__content .restaurant-title {
-  padding-left: 20px;
-  flex: 0.8;
-  line-height: 1.4;
-  color: black;
-}
 .restaurant__content .like-btn {
+  display: inline-block;
   position: relative;
-  font-size: 25px;
+  font-size: 28px;
   overflow: visible;
-  padding-right: 20px;
-  flex: 0.2;
-  width: 15px;
 }
 .restaurant__content .like-btn__main {
   position: absolute;
   z-index: 1;
-  right: 20px;
-  top: -15px;
   color: transparent;
+  top: -15px;
+  right: 0px;
+  bottom: 0px;
+  left: -48px;
+  height: fit-content;
 }
 .restaurant__content .like-btn__main:hover {
   cursor: pointer;
@@ -494,33 +519,197 @@ footer ul a:link {
 .restaurant__content .like-btn__background {
   position: absolute;
   z-index: 0;
+  overflow: visible;
   top: -15px;
-  right: 20px;
+  right: 0px;
+  bottom: 0px;
+  left: -48px;
+  height: fit-content;
+}
+.restaurant__content p {
+  font-size: 17px;
+}
+.restaurant__content .restaurant-title {
+  padding-left: 20px;
+  flex: 0.8;
+  line-height: 1.4;
+  color: black;
+}
+
+header a {
+  position: absolute;
+  left: 20px;
+  color: #393939;
+  font-size: 20px;
+}
+
+.top-img {
+  width: 100vw;
+  z-index: 0;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  z-index: 1;
+  top: -60px;
+  padding: 0 20px;
+  margin-bottom: -60px;
+}
+.menu__header {
+  padding: 15px 0 10px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.menu__header .like-btn {
+  display: inline-block;
+  position: relative;
+  font-size: 28px;
   overflow: visible;
 }
+.menu__header .like-btn__main {
+  position: absolute;
+  z-index: 1;
+  color: transparent;
+  top: 18px;
+  right: 0px;
+  bottom: 0px;
+  left: initial;
+  height: fit-content;
+}
+.menu__header .like-btn__main:hover {
+  cursor: pointer;
+  background-image: url("../assets/png/wave.png");
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: wave-animation 0.5s linear forwards, loading-animation 1.5s linear forwards;
+  background-size: 50px 50px;
+  background-repeat: repeat-x;
+  opacity: 1;
+  overflow: visible;
+}
+.menu__header .like-btn__background {
+  position: absolute;
+  z-index: 0;
+  overflow: visible;
+  top: 18px;
+  right: 0px;
+  bottom: 0px;
+  left: initial;
+  height: fit-content;
+}
+.menu__header h1 {
+  display: inline-block;
+  font-family: "shrikhand";
+  font-size: 28px;
+  font-weight: 400;
+}
+.menu h2 {
+  font-size: 16px;
+  font-weight: 300;
+  padding-bottom: 5px;
+  width: 38px;
+  border-bottom-color: #99e2d0;
+  border-bottom-style: solid;
+}
 
-@keyframes wave-animation {
-  0% {
-    background-position: 0 bottom;
-  }
-  100% {
-    background-position: 150px bottom;
-  }
+.category {
+  margin: 15px 0 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 15px;
 }
-@keyframes loading-animation {
-  0% {
-    background-size: 40px 0px;
-  }
-  100% {
-    background-size: 150px 80px;
-  }
+.category__course {
+  border-radius: 15px;
+  background-color: white;
+  height: 65px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
 }
-.stop1 {
-  stop-color: #9356dc;
+.category__course:nth-of-type(1) {
+  animation: SlideFromBottom 600ms ease-out 500ms forwards;
+}
+.category__course:nth-of-type(2) {
+  animation: SlideFromBottom 600ms ease-out 600ms forwards;
+}
+.category__course:nth-of-type(3) {
+  animation: SlideFromBottom 600ms ease-out 700ms forwards;
+}
+.category__course:nth-of-type(4) {
+  animation: SlideFromBottom 600ms ease-out 800ms forwards;
+}
+.category__course-title {
+  width: 100%;
+  line-height: 1.4;
+  overflow: hidden;
+  padding-left: 15px;
+}
+.category__course-title h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.category__course-title p {
+  font-size: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.category__course-price {
+  width: 80px;
+  text-align: end;
+  font-weight: 500;
+  padding-right: 15px;
+  transition: padding-right 0.4s ease-in-out;
+}
+.category__course-icon {
+  width: 60px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  background-color: #99e2d0;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: -60px;
+  transition: all 0.4s ease-in-out;
+}
+.category__course:hover .category__course-icon {
+  right: 0px;
+  transition: all 0.4s ease-in-out;
+}
+.category__course:hover .category__course-price {
+  padding-right: 75px;
+  transition: padding-right 0.4s ease-in-out;
 }
 
-.stop2 {
-  stop-color: #ff79da;
+.cmd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0 60px 0;
+  height: fit-content;
+}
+.cmd button {
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

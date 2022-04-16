@@ -104,9 +104,8 @@
     top: var.$tile-img-height;
     height: calc(100% - var.$tile-img-height);
     width: 100%;
-
-
     @include mix.flex(space-between, center);
+    @include mix.like-btn($font-size:28px, $top:-15px, $left:-48px, $bg-size:40px);
 
     p {
       font-size: 17px;
@@ -117,83 +116,6 @@
       flex: 0.8;
       line-height: 1.4;
       color: black;
-
-    }
-
-    .like-btn {
-      position: relative;
-      font-size: 25px;
-      overflow: visible;
-      padding-right: 20px;
-      flex: 0.2;
-      width: 15px;
-
-
-
-      &__main {
-        position: absolute;
-        z-index: 1;
-        right: 20px;
-        top: -15px;
-
-        color: transparent;
-
-
-        &:hover {
-          cursor: pointer;
-          background-image: url("../assets/png/wave.png");
-          -moz-background-clip: text;
-          -o-background-clip: text;
-          -webkit-background-clip: text;
-          background-clip: text;
-          animation: wave-animation 0.5s linear forwards, loading-animation 1.5s linear forwards;
-          background-size: 40px 40px;
-          background-repeat: repeat-x;
-          opacity: 1;
-          overflow: visible;
-        }
-      }
-
-      &__background {
-        position: absolute;
-        z-index: 0;
-        top: -15px;
-        right: 20px;
-        overflow: visible;
-      }
     }
   }
-}
-
-
-
-@keyframes wave-animation {
-  0% {
-    background-position: 0 bottom;
-  }
-
-  100% {
-    background-position: 150px bottom;
-  }
-}
-
-@keyframes loading-animation {
-  0% {
-    background-size: 40px 0px;
-  }
-
-  100% {
-    background-size: 150px 80px;
-  }
-}
-
-
-// Gradient colors for the heart button
-
-.stop1 {
-  stop-color: var.$primary-color;
-}
-
-.stop2 {
-  stop-color: var.$secondary-color;
 }

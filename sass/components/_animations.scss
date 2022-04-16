@@ -1,0 +1,35 @@
+/* ==================== Like Button Animation ==================== */
+
+@keyframes wave-animation {
+    0% {
+        background-position: 0 bottom;
+    }
+
+    100% {
+        background-position: 150px bottom;
+    }
+}
+
+@keyframes loading-animation {
+    0% {
+        background-size: 40px 0px;
+    }
+
+    100% {
+        background-size: 150px 80px;
+    }
+}
+
+/* ====================   Menu Animations   ==================== */
+
+@keyframes SlideFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -29,3 +29,51 @@
   background-color: $color;
   color: darken($color, 45%);
 }
+
+@mixin like-btn ($font-size:15px, $top:0px, $right:0px, $bottom:0px, $left:0px, $bg-size:40px) {
+  .like-btn {
+    display: inline-block;
+    position: relative;
+    font-size: $font-size;
+    overflow: visible;
+
+    &__main {
+      position: absolute;
+      z-index: 1;
+      color: transparent;
+      top: $top;
+      right: $right;
+      bottom: $bottom;
+      left: $left;
+      height: fit-content;
+
+
+      &:hover {
+        cursor: pointer;
+        background-image: url("../assets/png/wave.png");
+        -moz-background-clip: text;
+        -o-background-clip: text;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: wave-animation 0.5s linear forwards, loading-animation 1.5s linear forwards;
+        background-size: $bg-size $bg-size;
+        background-repeat: repeat-x;
+        opacity: 1;
+        overflow: visible;
+      }
+    }
+
+    &__background {
+      position: absolute;
+      z-index: 0;
+      overflow: visible;
+      top: $top;
+      right: $right;
+      bottom: $bottom;
+      left: $left;
+      height: fit-content;
+
+
+    }
+  }
+}

@@ -1,0 +1,160 @@
+@use "../utils/mixins"as mix;
+@use "../utils/variables"as var;
+
+header {
+    a {
+        position: absolute;
+        left: 20px;
+        color: var.$main-color--d2;
+        font-size: 20px;
+    }
+}
+
+.top-img {
+    width: 100vw;
+    z-index: 0;
+}
+
+.menu {
+    background-color: var.$main-color;
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    z-index: 1;
+    top: -60px;
+    padding: 0 20px;
+    margin-bottom: -60px;
+
+    &__header {
+        padding: 15px 0 10px 0;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        @include mix.like-btn($font-size:28px, $top:18px, $left:initial, $bg-size:50px);
+
+        h1 {
+            display: inline-block;
+            font-family: 'shrikhand';
+            font-size: 28px;
+            font-weight: 400;
+        }
+    }
+
+    h2 {
+
+        font-size: 16px;
+        font-weight: 300;
+        padding-bottom: 5px;
+        width: 38px;
+        border-bottom-color: var.$tertiary-color;
+        border-bottom-style: solid;
+    }
+}
+
+
+
+.category {
+    margin: 15px 0 40px 0;
+    @include mix.flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+
+
+    &__course {
+        border-radius: 15px;
+        background-color: white;
+        height: 65px;
+        width: 100%;
+        @include mix.btn-shadow;
+        @include mix.flex(space-between, center);
+        position: relative;
+        overflow: hidden;
+        opacity: 0;
+
+        &:nth-of-type(1) {
+            animation: SlideFromBottom 600ms ease-out 500ms forwards;
+        }
+
+        &:nth-of-type(2) {
+            animation: SlideFromBottom 600ms ease-out 600ms forwards;
+        }
+
+        &:nth-of-type(3) {
+            animation: SlideFromBottom 600ms ease-out 700ms forwards;
+        }
+
+        &:nth-of-type(4) {
+            animation: SlideFromBottom 600ms ease-out 800ms forwards;
+        }
+
+
+        &-title {
+
+            width: 100%;
+            line-height: 1.4;
+            overflow: hidden;
+            padding-left: 15px;
+
+            h3 {
+                font-size: 18px;
+                font-weight: 500;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+            p {
+                font-size: 15px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+
+        &-price {
+
+            width: 80px;
+            text-align: end;
+            font-weight: 500;
+            padding-right: 15px;
+            transition: padding-right 0.4s ease-in-out;
+        }
+
+        &-icon {
+            width: 60px;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            background-color: var.$tertiary-color;
+            height: 100%;
+            border-radius: 0 15px 15px 0;
+            @include mix.flex;
+            position: absolute;
+            top: 0;
+            right: -60px;
+            transition: all 0.4s ease-in-out;
+        }
+
+        &:hover &-icon {
+            right: 0px;
+            transition: all 0.4s ease-in-out;
+        }
+
+        &:hover &-price {
+            padding-right: 75px;
+            transition: padding-right 0.4s ease-in-out;
+        }
+    }
+}
+
+
+
+.cmd {
+    @include mix.flex;
+    padding: 5px 0 60px 0;
+    height: fit-content;
+
+    button {
+        margin: 0;
+    }
+}

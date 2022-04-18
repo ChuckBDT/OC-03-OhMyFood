@@ -359,6 +359,39 @@ footer ul a:link {
   display: none;
 }
 
+/* ====================== Loader Animation ======================= */
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes text {
+  0% {
+    background-position: -100px;
+  }
+  100% {
+    background-position: 500px;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes zback {
+  0% {
+    z-index: 4;
+  }
+  100% {
+    z-index: -10000;
+  }
+}
 /* ==================== Like Button Animation ==================== */
 @keyframes wave-animation {
   0% {
@@ -387,6 +420,46 @@ footer ul a:link {
     transform: translateY(0);
   }
 }
+.loader {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: white;
+  z-index: 4;
+  animation: fade 1.5s linear 3s forwards, zback 0.1s linear 4.5s forwards;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader p:first-child {
+  font-family: "shrikhand", arial;
+  font-size: 50px;
+  animation: loading 1s linear forwards, text 1.5s linear 1s infinite, fade 1.5s linear 3s forwards;
+  background-image: url("../assets/png/triband-loader.png");
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: transparent;
+  opacity: 0;
+  overflow: visible;
+  position: absolute;
+  background-position: -100px;
+  z-index: 6;
+  filter: blur(1.5px);
+}
+.loader p:last-child {
+  font-family: "shrikhand", arial;
+  font-size: 50px;
+  color: black;
+  position: absolute;
+  z-index: 5;
+  animation: loading 1s linear forwards, fade 1.5s linear 3s forwards;
+}
+
 .banner {
   position: relative;
   z-index: 1;
@@ -465,6 +538,11 @@ footer ul a:link {
   width: 100%;
   height: 250px;
   position: relative;
+  transition: transform 0.1s ease-in-out;
+}
+.restaurant:hover {
+  transform: scale(1.005);
+  transition: transform 0.1s ease-in-out;
 }
 .restaurant span {
   position: absolute;
@@ -501,7 +579,8 @@ footer ul a:link {
   right: 0px;
   bottom: 0px;
   left: -48px;
-  height: fit-content;
+  height: 28px;
+  width: 28px;
 }
 .restaurant__content .like-btn__main:hover {
   cursor: pointer;
@@ -510,7 +589,7 @@ footer ul a:link {
   -o-background-clip: text;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: wave-animation 0.5s linear forwards, loading-animation 1.5s linear forwards;
+  animation: wave-animation 1s ease-in forwards, loading-animation 1.5s ease-in forwards;
   background-size: 40px 40px;
   background-repeat: repeat-x;
   opacity: 1;
@@ -524,7 +603,8 @@ footer ul a:link {
   right: 0px;
   bottom: 0px;
   left: -48px;
-  height: fit-content;
+  height: 28px;
+  width: 28px;
 }
 .restaurant__content p {
   font-size: 17px;
@@ -577,7 +657,8 @@ header a {
   right: 0px;
   bottom: 0px;
   left: initial;
-  height: fit-content;
+  height: 28px;
+  width: 28px;
 }
 .menu__header .like-btn__main:hover {
   cursor: pointer;
@@ -586,8 +667,8 @@ header a {
   -o-background-clip: text;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: wave-animation 0.5s linear forwards, loading-animation 1.5s linear forwards;
-  background-size: 50px 50px;
+  animation: wave-animation 1s ease-in forwards, loading-animation 1.5s ease-in forwards;
+  background-size: 40px 40px;
   background-repeat: repeat-x;
   opacity: 1;
   overflow: visible;
@@ -600,7 +681,8 @@ header a {
   right: 0px;
   bottom: 0px;
   left: initial;
-  height: fit-content;
+  height: 28px;
+  width: 28px;
 }
 .menu__header h1 {
   display: inline-block;
@@ -692,6 +774,10 @@ header a {
   right: -60px;
   transition: all 0.4s ease-in-out;
 }
+.category__course-icon::before {
+  transform: rotate(-360deg);
+  transition: transform 0.4s ease-in-out;
+}
 .category__course:hover .category__course-icon {
   right: 0px;
   transition: all 0.4s ease-in-out;
@@ -699,6 +785,9 @@ header a {
 .category__course:hover .category__course-price {
   padding-right: 75px;
   transition: padding-right 0.4s ease-in-out;
+}
+.category__course:hover .category__course-icon::before {
+  transform: rotate(0deg);
 }
 
 .cmd {

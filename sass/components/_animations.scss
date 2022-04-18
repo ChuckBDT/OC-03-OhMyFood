@@ -1,3 +1,51 @@
+@use "../utils/variables"as var;
+
+/* ====================== Loader Animation ======================= */
+
+@keyframes loading {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes text {
+    0% {
+        background-position: -100px;
+    }
+
+    100% {
+        background-position: 500px;
+    }
+}
+
+@keyframes fade {
+    0% {
+        // transform: scale(1, 1);
+        opacity: 1;
+    }
+
+    100% {
+        // transform: scale(700, 700);
+        opacity: 0;
+    }
+}
+
+@keyframes zback {
+    0% {
+        // transform: scale(1, 1);
+        z-index: 4;
+    }
+
+    100% {
+        // transform: scale(700, 700);
+        z-index: -10000;
+    }
+}
+
 /* ==================== Like Button Animation ==================== */
 
 @keyframes wave-animation {

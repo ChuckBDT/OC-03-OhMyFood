@@ -29,7 +29,7 @@ header {
         position: relative;
         display: flex;
         justify-content: space-between;
-        @include mix.like-btn($font-size:28px, $top:18px, $left:initial, $bg-size:50px);
+        @include mix.like-btn($font-size:28px, $top:18px, $left:initial, $bg-size:40px);
 
         h1 {
             display: inline-block;
@@ -50,15 +50,11 @@ header {
     }
 }
 
-
-
 .category {
     margin: 15px 0 40px 0;
     @include mix.flex;
     flex-direction: column;
     row-gap: 15px;
-
-
 
     &__course {
         border-radius: 15px;
@@ -86,7 +82,6 @@ header {
         &:nth-of-type(4) {
             animation: SlideFromBottom 600ms ease-out 800ms forwards;
         }
-
 
         &-title {
 
@@ -135,6 +130,11 @@ header {
             transition: all 0.4s ease-in-out;
         }
 
+        &-icon::before {
+            transform: rotate(-360deg);
+            transition: transform .4s ease-in-out;
+        }
+
         &:hover &-icon {
             right: 0px;
             transition: all 0.4s ease-in-out;
@@ -144,10 +144,13 @@ header {
             padding-right: 75px;
             transition: padding-right 0.4s ease-in-out;
         }
+
+        &:hover &-icon::before {
+            transform: rotate(0deg);
+
+        }
     }
 }
-
-
 
 .cmd {
     @include mix.flex;

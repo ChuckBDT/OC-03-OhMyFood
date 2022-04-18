@@ -30,7 +30,7 @@
   color: darken($color, 45%);
 }
 
-@mixin like-btn ($font-size:15px, $top:0px, $right:0px, $bottom:0px, $left:0px, $bg-size:40px) {
+@mixin like-btn ($font-size:28px, $top:0px, $right:0px, $bottom:0px, $left:0px, $bg-size:40px) {
   .like-btn {
     display: inline-block;
     position: relative;
@@ -45,7 +45,8 @@
       right: $right;
       bottom: $bottom;
       left: $left;
-      height: fit-content;
+      height: $font-size;
+      width: $font-size;
 
 
       &:hover {
@@ -55,7 +56,7 @@
         -o-background-clip: text;
         -webkit-background-clip: text;
         background-clip: text;
-        animation: wave-animation 0.5s linear forwards, loading-animation 1.5s linear forwards;
+        animation: wave-animation 1s ease-in forwards, loading-animation 1.5s ease-in forwards;
         background-size: $bg-size $bg-size;
         background-repeat: repeat-x;
         opacity: 1;
@@ -71,7 +72,8 @@
       right: $right;
       bottom: $bottom;
       left: $left;
-      height: fit-content;
+      height: $font-size;
+      width: $font-size;
 
 
     }

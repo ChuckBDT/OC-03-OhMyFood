@@ -1,47 +1,6 @@
 @use "../utils/mixins"as mix;
 @use "../utils/variables"as var;
 
-.loader {
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  background-color: white;
-  z-index: 4;
-  animation: fade 1.5s linear 3s forwards, zback .1s linear 4.5s forwards;
-  opacity: 1;
-  @include mix.flex;
-
-
-  p:first-child {
-    font-family: 'shrikhand', arial;
-    font-size: 50px;
-    animation: loading 1s linear forwards, text 1.5s linear 1s infinite, fade 1.5s linear 3s forwards;
-    background-image: url("../assets/png/triband-loader.png");
-    -moz-background-clip: text;
-    -o-background-clip: text;
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-repeat: no-repeat;
-    background-size: contain;
-    color: transparent;
-    opacity: 0;
-    overflow: visible;
-    position: absolute;
-    background-position: -100px;
-    z-index: 6;
-    filter: blur(1.5px);
-  }
-
-  p:last-child {
-    font-family: 'shrikhand', arial;
-    font-size: 50px;
-    color: black;
-    position: absolute;
-    z-index: 5;
-    animation: loading 1s linear forwards, fade 1.5s linear 3s forwards;
-  }
-}
-
 .banner {
   position: relative;
   z-index: 1;
@@ -109,13 +68,15 @@
   padding: 50px 20px 30px 20px;
 
   .places__list {
-    margin: 10px 0 20px 0;
+    margin: 20px 0;
     @include mix.flex(center, center);
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 20px;
 
     a {
       text-decoration: none;
+      width: 100%;
+      z-index: 2;
     }
 
   }
@@ -126,6 +87,7 @@
   height: 250px;
   position: relative;
   transition: transform .1s ease-in-out;
+  @include mix.like-btn($font-size:28px, $right:20px, $left:unset, $top:unset, $bottom:30px, $bg-size:40px);
 
   &:hover {
     transform: scale(1.005);
@@ -142,25 +104,24 @@
     height: var.$tile-img-height;
     width: 100%;
     object-fit: cover;
-    overflow: auto;
     border-radius: var.$tile-border-radius var.$tile-border-radius 0 0;
   }
 
   &__content {
-    position: absolute;
-    top: var.$tile-img-height;
-    height: calc(100% - var.$tile-img-height);
+    height: 100%;
     width: 100%;
-    @include mix.flex(space-between, center);
-    @include mix.like-btn($font-size:28px, $top:-15px, $left:-48px, $bg-size:40px);
+    flex-direction: column;
+    @include mix.flex(space-between, start);
 
     p {
       font-size: 17px;
     }
 
-    .restaurant-title {
-      padding-left: 20px;
-      flex: 0.8;
+    &__title {
+      @include mix.flex (center, start);
+      flex-direction: column;
+      padding: 0px 20px;
+      flex: 1;
       line-height: 1.4;
       color: black;
     }

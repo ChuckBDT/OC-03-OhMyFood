@@ -1,0 +1,41 @@
+@use "../utils/mixins"as mix;
+
+.loader {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: white;
+    z-index: 4;
+    animation: fade 1.5s linear 3s forwards, zback .1s linear 4.5s forwards;
+    opacity: 1;
+    @include mix.flex;
+
+    p:first-child {
+        font-family: 'shrikhand', arial;
+        font-size: 50px;
+        animation: loading 1s linear forwards, text 1.5s linear 1s infinite, fade 1.5s linear 3s forwards;
+        background-image: url("../assets/png/triband-loader.png");
+        -moz-background-clip: text;
+        -o-background-clip: text;
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: transparent;
+        opacity: 0;
+        overflow: visible;
+        position: absolute;
+        background-position: -100px;
+        z-index: 6;
+        filter: blur(1.5px);
+    }
+
+    p:last-child {
+        font-family: 'shrikhand', arial;
+        font-size: 50px;
+        color: black;
+        position: absolute;
+        z-index: 5;
+        animation: loading 1s linear forwards, fade 1.5s linear 3s forwards;
+    }
+}

@@ -29,13 +29,14 @@ header {
         position: relative;
         display: flex;
         justify-content: space-between;
-        @include mix.like-btn($font-size:28px, $top:18px, $left:initial, $bg-size:40px);
+        @include mix.like-btn($font-size:28px, $top:32px, $bottom:unset, $left:unset, $right: 0px, $bg-size:40px);
 
         h1 {
             display: inline-block;
             font-family: 'shrikhand';
             font-size: 28px;
             font-weight: 400;
+            flex: 0.85;
         }
     }
 
@@ -61,7 +62,7 @@ header {
         background-color: white;
         height: 65px;
         width: 100%;
-        @include mix.btn-shadow;
+        @include mix.btn-shadow-without-hover;
         @include mix.flex(space-between, center);
         position: relative;
         overflow: hidden;
@@ -81,6 +82,10 @@ header {
 
         &:nth-of-type(4) {
             animation: SlideFromBottom 600ms ease-out 800ms forwards;
+        }
+
+        &:nth-of-type(5) {
+            animation: SlideFromBottom 600ms ease-out 900ms forwards;
         }
 
         &-title {
@@ -147,7 +152,6 @@ header {
 
         &:hover &-icon::before {
             transform: rotate(0deg);
-
         }
     }
 }

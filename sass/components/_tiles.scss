@@ -1,12 +1,59 @@
 @use "../utils/mixins"as mix;
 @use "../utils/variables"as var;
 
+.step-tile {
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    @include mix.btn-shadow-without-hover;
+    border-radius: 20px;
+    background-color: var.$main-color;
+    line-height: normal;
+
+    &__order {
+        height: 25px;
+        width: 25px;
+        @include mix.flex;
+        color: white;
+        font-size: 12px;
+        font-weight: bolder;
+        border-radius: 100%;
+        background-color: var.$primary-color;
+        margin-left: -12px;
+    }
+
+    &__icon {
+        @include mix.flex;
+        flex: 0.2;
+        font-size: 18px;
+        height: 100%;
+        @include mix.step-icon-color;
+    }
+
+    &__text {
+        @include mix.flex(start, center);
+        flex: 0.8;
+        height: 100%;
+        font-weight: 500;
+    }
+
+    &:hover {
+        @include mix.step-btn-hover;
+
+        .step-tile__icon {
+            color: var.$primary-color;
+        }
+    }
+}
+
 .rounded-shadowed-tile {
     height: 200px;
     width: 200px;
     background: white;
     border-radius: var.$tile-border-radius;
-    @include mix.btn-shadow;
+    @include mix.btn-shadow-with-hover;
 }
 
 .span-lightcolor-tile {

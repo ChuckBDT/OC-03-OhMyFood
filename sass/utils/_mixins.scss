@@ -6,12 +6,16 @@
   align-items: $align;
 }
 
-@mixin btn-shadow {
+@mixin btn-shadow-with-hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.20);
+
+  &:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.30);
+  }
 }
 
-@mixin btn-shadow-darken {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.30);
+@mixin btn-shadow-without-hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.20);
 }
 
 @mixin step-icon-color {
@@ -25,6 +29,7 @@
   background-color: hsl($hue, $satu, $hsl);
 }
 
+// Used for the span green button on the restaurant's tiles
 @mixin light-back-dark-font ($color: var.$tertiary-color) {
   background-color: $color;
   color: darken($color, 45%);
@@ -32,14 +37,12 @@
 
 @mixin like-btn ($font-size:28px, $top:0px, $right:0px, $bottom:0px, $left:0px, $bg-size:40px) {
   .like-btn {
-    display: inline-block;
-    position: relative;
     font-size: $font-size;
     overflow: visible;
 
     &__main {
       position: absolute;
-      z-index: 1;
+      z-index: 4;
       color: transparent;
       top: $top;
       right: $right;
@@ -48,6 +51,7 @@
       height: $font-size;
       width: $font-size;
 
+      animation-direction: reverse;
 
       &:hover {
         cursor: pointer;
@@ -66,7 +70,7 @@
 
     &__background {
       position: absolute;
-      z-index: 0;
+      z-index: 3;
       overflow: visible;
       top: $top;
       right: $right;
@@ -74,8 +78,7 @@
       left: $left;
       height: $font-size;
       width: $font-size;
-
-
+      color: black;
     }
   }
 }

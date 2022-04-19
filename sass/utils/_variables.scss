@@ -2,13 +2,18 @@ $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 
+// Shades of the main color (gray)
 
 $main-color: #f6f6f6;
 $main-color--d1: darken($main-color, 5%);
 $main-color--d2: darken($main-color, 74%);
 
+// Used for the restaurant's tiles
 $tile-border-radius: 15px;
 $tile-img-height: 170px;
+
+
+// Used for the gradient-rounded-btn 
 
 $grad-prim-to-secon-color: linear-gradient($primary-color, $secondary-color);
 $grad-secon-to-prim-color: linear-gradient($secondary-color, $primary-color);

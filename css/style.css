@@ -273,52 +273,44 @@ footer ul a:link {
   color: white;
 }
 
-.step-btn {
-  height: 75px;
-  width: 100%;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  background-color: #f6f6f6;
-  line-height: normal;
-}
-.step-btn__order {
-  height: 25px;
-  width: 25px;
+.loader {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: white;
+  z-index: 4;
+  animation: fade 1.5s linear 3s forwards, zback 0.1s linear 4.5s forwards;
+  opacity: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  font-size: 12px;
-  font-weight: bolder;
-  border-radius: 100%;
-  background-color: #9356dc;
-  margin-left: -12px;
 }
-.step-btn__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 0.2;
-  font-size: 18px;
-  height: 100%;
-  color: #777777;
+.loader p:first-child {
+  font-family: "shrikhand", arial;
+  font-size: 50px;
+  animation: loading 1s linear forwards, text 1.5s linear 1s infinite, fade 1.5s linear 3s forwards;
+  background-image: url("../assets/png/triband-loader.png");
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: transparent;
+  opacity: 0;
+  overflow: visible;
+  position: absolute;
+  background-position: -100px;
+  z-index: 6;
+  filter: blur(1.5px);
 }
-.step-btn__text {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  flex: 0.8;
-  height: 100%;
-  font-weight: 500;
-}
-.step-btn:hover {
-  background-color: hsl(267.3134328358deg, 65.6862745098%, 96.4705882353%);
-}
-.step-btn:hover .step-btn__icon {
-  color: #9356dc;
+.loader p:last-child {
+  font-family: "shrikhand", arial;
+  font-size: 50px;
+  color: black;
+  position: absolute;
+  z-index: 5;
+  animation: loading 1s linear forwards, fade 1.5s linear 3s forwards;
 }
 
 .gradient-rounded-btn {
@@ -335,8 +327,58 @@ footer ul a:link {
   cursor: pointer;
 }
 .gradient-rounded-btn:hover {
-  background-image: linear-gradient(#ff88de, #9b63df);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.gradient-rounded-btn:hover {
+  background-image: linear-gradient(#ff88de, #9b63df);
+}
+
+.step-tile {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  line-height: normal;
+}
+.step-tile__order {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  font-weight: bolder;
+  border-radius: 100%;
+  background-color: #9356dc;
+  margin-left: -12px;
+}
+.step-tile__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0.2;
+  font-size: 18px;
+  height: 100%;
+  color: #777777;
+}
+.step-tile__text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex: 0.8;
+  height: 100%;
+  font-weight: 500;
+}
+.step-tile:hover {
+  background-color: hsl(267.3134328358deg, 65.6862745098%, 96.4705882353%);
+}
+.step-tile:hover .step-tile__icon {
+  color: #9356dc;
 }
 
 .rounded-shadowed-tile {
@@ -345,6 +387,9 @@ footer ul a:link {
   background: white;
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.rounded-shadowed-tile:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .span-lightcolor-tile {
@@ -420,46 +465,6 @@ footer ul a:link {
     transform: translateY(0);
   }
 }
-.loader {
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  background-color: white;
-  z-index: 4;
-  animation: fade 1.5s linear 3s forwards, zback 0.1s linear 4.5s forwards;
-  opacity: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.loader p:first-child {
-  font-family: "shrikhand", arial;
-  font-size: 50px;
-  animation: loading 1s linear forwards, text 1.5s linear 1s infinite, fade 1.5s linear 3s forwards;
-  background-image: url("../assets/png/triband-loader.png");
-  -moz-background-clip: text;
-  -o-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-repeat: no-repeat;
-  background-size: contain;
-  color: transparent;
-  opacity: 0;
-  overflow: visible;
-  position: absolute;
-  background-position: -100px;
-  z-index: 6;
-  filter: blur(1.5px);
-}
-.loader p:last-child {
-  font-family: "shrikhand", arial;
-  font-size: 50px;
-  color: black;
-  position: absolute;
-  z-index: 5;
-  animation: loading 1s linear forwards, fade 1.5s linear 3s forwards;
-}
-
 .banner {
   position: relative;
   z-index: 1;
@@ -523,15 +528,17 @@ footer ul a:link {
   padding: 50px 20px 30px 20px;
 }
 #places .places__list {
-  margin: 10px 0 20px 0;
+  margin: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 20px;
 }
 #places .places__list a {
   text-decoration: none;
+  width: 100%;
+  z-index: 2;
 }
 
 .restaurant {
@@ -539,6 +546,47 @@ footer ul a:link {
   height: 250px;
   position: relative;
   transition: transform 0.1s ease-in-out;
+}
+.restaurant .like-btn {
+  font-size: 28px;
+  overflow: visible;
+}
+.restaurant .like-btn__main {
+  position: absolute;
+  z-index: 4;
+  color: transparent;
+  top: unset;
+  right: 20px;
+  bottom: 30px;
+  left: unset;
+  height: 28px;
+  width: 28px;
+  animation-direction: reverse;
+}
+.restaurant .like-btn__main:hover {
+  cursor: pointer;
+  background-image: url("../assets/png/wave.png");
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: wave-animation 1s ease-in forwards, loading-animation 1.5s ease-in forwards;
+  background-size: 40px 40px;
+  background-repeat: repeat-x;
+  opacity: 1;
+  overflow: visible;
+}
+.restaurant .like-btn__background {
+  position: absolute;
+  z-index: 3;
+  overflow: visible;
+  top: unset;
+  right: 20px;
+  bottom: 30px;
+  left: unset;
+  height: 28px;
+  width: 28px;
+  color: black;
 }
 .restaurant:hover {
   transform: scale(1.005);
@@ -553,65 +601,26 @@ footer ul a:link {
   height: 170px;
   width: 100%;
   object-fit: cover;
-  overflow: auto;
   border-radius: 15px 15px 0 0;
 }
 .restaurant__content {
-  position: absolute;
-  top: 170px;
-  height: calc(100% - 170px);
+  height: 100%;
   width: 100%;
+  flex-direction: column;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-.restaurant__content .like-btn {
-  display: inline-block;
-  position: relative;
-  font-size: 28px;
-  overflow: visible;
-}
-.restaurant__content .like-btn__main {
-  position: absolute;
-  z-index: 1;
-  color: transparent;
-  top: -15px;
-  right: 0px;
-  bottom: 0px;
-  left: -48px;
-  height: 28px;
-  width: 28px;
-}
-.restaurant__content .like-btn__main:hover {
-  cursor: pointer;
-  background-image: url("../assets/png/wave.png");
-  -moz-background-clip: text;
-  -o-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: wave-animation 1s ease-in forwards, loading-animation 1.5s ease-in forwards;
-  background-size: 40px 40px;
-  background-repeat: repeat-x;
-  opacity: 1;
-  overflow: visible;
-}
-.restaurant__content .like-btn__background {
-  position: absolute;
-  z-index: 0;
-  overflow: visible;
-  top: -15px;
-  right: 0px;
-  bottom: 0px;
-  left: -48px;
-  height: 28px;
-  width: 28px;
+  align-items: start;
 }
 .restaurant__content p {
   font-size: 17px;
 }
-.restaurant__content .restaurant-title {
-  padding-left: 20px;
-  flex: 0.8;
+.restaurant__content__title {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding: 0px 20px;
+  flex: 1;
   line-height: 1.4;
   color: black;
 }
@@ -644,21 +653,20 @@ header a {
   justify-content: space-between;
 }
 .menu__header .like-btn {
-  display: inline-block;
-  position: relative;
   font-size: 28px;
   overflow: visible;
 }
 .menu__header .like-btn__main {
   position: absolute;
-  z-index: 1;
+  z-index: 4;
   color: transparent;
-  top: 18px;
+  top: 32px;
   right: 0px;
-  bottom: 0px;
-  left: initial;
+  bottom: unset;
+  left: unset;
   height: 28px;
   width: 28px;
+  animation-direction: reverse;
 }
 .menu__header .like-btn__main:hover {
   cursor: pointer;
@@ -675,20 +683,22 @@ header a {
 }
 .menu__header .like-btn__background {
   position: absolute;
-  z-index: 0;
+  z-index: 3;
   overflow: visible;
-  top: 18px;
+  top: 32px;
   right: 0px;
-  bottom: 0px;
-  left: initial;
+  bottom: unset;
+  left: unset;
   height: 28px;
   width: 28px;
+  color: black;
 }
 .menu__header h1 {
   display: inline-block;
   font-family: "shrikhand";
   font-size: 28px;
   font-weight: 400;
+  flex: 0.85;
 }
 .menu h2 {
   font-size: 16px;
@@ -731,6 +741,9 @@ header a {
 }
 .category__course:nth-of-type(4) {
   animation: SlideFromBottom 600ms ease-out 800ms forwards;
+}
+.category__course:nth-of-type(5) {
+  animation: SlideFromBottom 600ms ease-out 900ms forwards;
 }
 .category__course-title {
   width: 100%;

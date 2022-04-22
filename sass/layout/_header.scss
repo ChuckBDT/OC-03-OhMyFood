@@ -1,3 +1,6 @@
+@use "../utils/mixins"as mix;
+@use "../utils/variables"as var;
+
 header {
   height: 65px;
   display: flex;
@@ -6,6 +9,27 @@ header {
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 2;
+  background-color: white;
+
+  @include mix.tablet-resp {
+    top: 30px;
+    border-radius: 40px 40px 0 0;
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  @include mix.desktop-resp {
+    width: 80vw;
+    margin: 0 auto;
+    max-width: var.$max-width-responsive;
+  }
+
+  a {
+    position: absolute;
+    left: 20px;
+    color: var.$main-color--d2;
+    font-size: 20px;
+  }
 
   img {
     height: 27px;

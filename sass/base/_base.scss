@@ -1,15 +1,26 @@
+@use "../utils/mixins"as mix;
+@use "../utils/variables"as var;
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 * {
   font-family: "Roboto";
+  -webkit-margin-before: 0;
   margin-block-start: 0;
+  -webkit-margin-after: 0;
   margin-block-end: 0;
+  -webkit-margin-start: 0;
   margin-inline-start: 0;
+  -webkit-margin-end: 0;
   margin-inline-end: 0;
+  -webkit-padding-start: 0;
   padding-inline-start: 0;
+  -webkit-padding-end: 0;
   padding-inline-end: 0;
 }
+
+
 
 p {
   font-weight: 300;

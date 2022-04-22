@@ -60,6 +60,7 @@
         -o-background-clip: text;
         -webkit-background-clip: text;
         background-clip: text;
+        -webkit-animation: wave-animation 1s ease-in forwards, loading-animation 1.5s ease-in forwards;
         animation: wave-animation 1s ease-in forwards, loading-animation 1.5s ease-in forwards;
         background-size: $bg-size $bg-size;
         background-repeat: repeat-x;
@@ -80,5 +81,17 @@
       width: $font-size;
       color: black;
     }
+  }
+}
+
+@mixin tablet-resp {
+  @media screen and (min-width: map-get(var.$breakpoints, smartphone)) and (max-width: map-get(var.$breakpoints, tablet)) {
+    @content
+  }
+}
+
+@mixin desktop-resp {
+  @media screen and (min-width: map-get(var.$breakpoints, tablet)) {
+    @content
   }
 }

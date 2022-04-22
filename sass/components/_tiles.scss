@@ -5,7 +5,7 @@
     height: 75px;
     width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     @include mix.btn-shadow-without-hover;
     border-radius: 20px;
@@ -54,6 +54,7 @@
     background: white;
     border-radius: var.$tile-border-radius;
     @include mix.btn-shadow-with-hover;
+
 }
 
 .span-lightcolor-tile {

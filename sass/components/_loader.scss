@@ -5,7 +5,8 @@
     width: 100vw;
     position: fixed;
     background-color: white;
-    z-index: 4;
+    z-index: 100;
+    -webkit-animation: fade 1.5s linear 3s forwards, zback .1s linear 4.5s forwards;
     animation: fade 1.5s linear 3s forwards, zback .1s linear 4.5s forwards;
     opacity: 1;
     @include mix.flex;
@@ -13,6 +14,7 @@
     p:first-child {
         font-family: 'shrikhand', arial;
         font-size: 50px;
+        -webkit-animation: loading 1s linear forwards, text 1.5s linear 1s infinite, fade 1.5s linear 3s forwards;
         animation: loading 1s linear forwards, text 1.5s linear 1s infinite, fade 1.5s linear 3s forwards;
         background-image: url("../assets/png/triband-loader.png");
         -moz-background-clip: text;
@@ -26,7 +28,8 @@
         overflow: visible;
         position: absolute;
         background-position: -100px;
-        z-index: 6;
+        z-index: 102;
+        -webkit-filter: blur(1.5px);
         filter: blur(1.5px);
     }
 
@@ -35,7 +38,8 @@
         font-size: 50px;
         color: black;
         position: absolute;
-        z-index: 5;
+        z-index: 101;
+        -webkit-animation: loading 1s linear forwards, fade 1.5s linear 3s forwards;
         animation: loading 1s linear forwards, fade 1.5s linear 3s forwards;
     }
 }

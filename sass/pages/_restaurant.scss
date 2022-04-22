@@ -1,18 +1,60 @@
 @use "../utils/mixins"as mix;
 @use "../utils/variables"as var;
 
-header {
-    a {
-        position: absolute;
-        left: 20px;
-        color: var.$main-color--d2;
-        font-size: 20px;
-    }
-}
-
 .top-img {
     width: 100vw;
     z-index: 0;
+
+    @include mix.tablet-resp {
+        position: fixed;
+        height: 100vh;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center;
+        object-position: center;
+        top: 0px;
+        filter: blur(10px);
+    }
+
+    @include mix.desktop-resp {
+        position: fixed;
+        height: 100vh;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center;
+        object-position: center;
+        top: 0px;
+        filter: blur(10px);
+    }
+
+}
+
+.inside-img {
+    width: 80vw;
+    margin: 0 auto;
+    border-radius: 0;
+    padding: 0px;
+    top: initial;
+    height: 300px;
+    display: none;
+
+    @include mix.tablet-resp {
+        display: block;
+    }
+
+    @include mix.desktop-resp {
+        display: block;
+        width: 80vw;
+        margin: 0 auto;
+        max-width: var.$max-width-responsive;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
 }
 
 .menu {
@@ -21,15 +63,45 @@ header {
     position: relative;
     z-index: 1;
     top: -60px;
+
     padding: 0 20px;
     margin-bottom: -60px;
+
+    @include mix.tablet-resp {
+        @include mix.btn-shadow-without-hover;
+        width: 80vw;
+        margin: 0 auto;
+        border-radius: 0;
+        padding: 0px;
+        top: 0px;
+    }
+
+    @include mix.desktop-resp {
+        width: 80vw;
+        margin: 0 auto;
+        max-width: var.$max-width-responsive;
+        border-radius: 0;
+        padding: 0px;
+        top: 0px;
+
+    }
 
     &__header {
         padding: 15px 0 10px 0;
         position: relative;
         display: flex;
         justify-content: space-between;
-        @include mix.like-btn($font-size:28px, $top:32px, $bottom:unset, $left:unset, $right: 0px, $bg-size:40px);
+        @include mix.like-btn($font-size:28px, $top:33px, $bottom:unset, $left:unset, $right: 0px, $bg-size:40px);
+
+        @include mix.tablet-resp {
+            @include mix.like-btn($font-size:28px, $top:33px, $bottom:unset, $left:unset, $right: 0px, $bg-size:40px);
+            margin: 0 20px;
+        }
+
+        @include mix.desktop-resp {
+            @include mix.like-btn($font-size:28px, $top:33px, $bottom:unset, $left:unset, $right: 0px, $bg-size:40px);
+            margin: 0 20px;
+        }
 
         h1 {
             display: inline-block;
@@ -48,6 +120,14 @@ header {
         width: 38px;
         border-bottom-color: var.$tertiary-color;
         border-bottom-style: solid;
+
+        @include mix.tablet-resp {
+            margin: 0 20px;
+        }
+
+        @include mix.desktop-resp {
+            margin: 0 20px;
+        }
     }
 }
 
@@ -56,6 +136,14 @@ header {
     @include mix.flex;
     flex-direction: column;
     row-gap: 15px;
+
+    @include mix.tablet-resp {
+        margin: 15px 20px 40px 20px;
+    }
+
+    @include mix.desktop-resp {
+        margin: 15px 20px 40px 20px;
+    }
 
     &__course {
         border-radius: 15px;
@@ -69,22 +157,27 @@ header {
         opacity: 0;
 
         &:nth-of-type(1) {
+            -webkit-animation: SlideFromBottom 600ms ease-out 500ms forwards;
             animation: SlideFromBottom 600ms ease-out 500ms forwards;
         }
 
         &:nth-of-type(2) {
+            -webkit-animation: SlideFromBottom 600ms ease-out 600ms forwards;
             animation: SlideFromBottom 600ms ease-out 600ms forwards;
         }
 
         &:nth-of-type(3) {
+            -webkit-animation: SlideFromBottom 600ms ease-out 700ms forwards;
             animation: SlideFromBottom 600ms ease-out 700ms forwards;
         }
 
         &:nth-of-type(4) {
+            -webkit-animation: SlideFromBottom 600ms ease-out 800ms forwards;
             animation: SlideFromBottom 600ms ease-out 800ms forwards;
         }
 
         &:nth-of-type(5) {
+            -webkit-animation: SlideFromBottom 600ms ease-out 900ms forwards;
             animation: SlideFromBottom 600ms ease-out 900ms forwards;
         }
 
@@ -159,7 +252,17 @@ header {
 .cmd {
     @include mix.flex;
     padding: 5px 0 60px 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+
+    @include mix.tablet-resp {
+        padding-bottom: 50px;
+    }
+
+    @include mix.desktop-resp {
+        padding-bottom: 50px;
+    }
 
     button {
         margin: 0;

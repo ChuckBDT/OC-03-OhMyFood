@@ -111,24 +111,18 @@
             flex: 0.85;
         }
     }
+}
 
-    h2 {
+.categories {
+    @include mix.desktop-resp {
+        @include mix.flex(space-between, center);
+        width: auto;
+        margin: 0 20px;
 
-        font-size: 16px;
-        font-weight: 300;
-        padding-bottom: 5px;
-        width: 38px;
-        border-bottom-color: var.$tertiary-color;
-        border-bottom-style: solid;
 
-        @include mix.tablet-resp {
-            margin: 0 20px;
-        }
 
-        @include mix.desktop-resp {
-            margin: 0 20px;
-        }
     }
+
 }
 
 .category {
@@ -142,7 +136,18 @@
     }
 
     @include mix.desktop-resp {
-        margin: 15px 20px 40px 20px;
+        margin: 15px 0 40px 0;
+        width: 32%;
+    }
+
+    h2 {
+        font-size: 16px;
+        font-weight: 300;
+        padding-bottom: 5px;
+        width: 38px;
+        border-bottom-color: var.$tertiary-color;
+        border-bottom-style: solid;
+        align-self: start;
     }
 
     &__course {

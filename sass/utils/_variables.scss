@@ -23,5 +23,5 @@ $grad-secon-to-prim-color-lighter: linear-gradient(lighten($secondary-color, $li
 
 // Responsive's variables
 
-$breakpoints: (smartphone: 440px, tablet: 768px, desktop: 1440px, wide: 1440px);
+$breakpoints: (smartphone: 440px, tablet: 1024px, desktop: 1440px, wide: 1440px);
 $max-width-responsive: 1440px;

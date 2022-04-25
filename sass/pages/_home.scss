@@ -19,15 +19,6 @@
 
   @include mix.tablet-resp {
     top: 30px;
-    width: 80vw;
-
-    margin: 0 auto;
-  }
-
-  @include mix.desktop-resp {
-    width: 80vw;
-    margin: 0 auto;
-    max-width: var.$max-width-responsive;
   }
 
   .location {
@@ -86,13 +77,6 @@
       height: 150px;
       padding: 30px 30px 20px 30px;
     }
-
-    &__btn {
-      height: 50px;
-      width: 220px;
-      margin: 20px 0;
-      cursor: pointer;
-    }
   }
 }
 
@@ -100,33 +84,15 @@
   padding: 50px 20px 30px 20px;
 
   @include mix.tablet-resp {
-    background-color: white;
     position: relative;
-    width: 80vw;
-    margin: 0 auto;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 80px;
+    background-color: white;
+    top: 30px;
+    padding-top: 50px;
   }
 
   @include mix.desktop-resp {
     background-color: white;
     position: relative;
-    width: 80vw;
-    margin: 0 auto;
-    padding-left: 0;
-    padding-right: 0;
-    max-width: var.$max-width-responsive;
-  }
-
-  h2 {
-    @include mix.tablet-resp {
-      margin: 0 20px;
-    }
-
-    @include mix.desktop-resp {
-      margin: 0 20px;
-    }
   }
 
   .functioning__steps {
@@ -137,12 +103,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @include mix.tablet-resp {
-      margin: 20px 20px 0 20px;
-    }
-
     @include mix.desktop-resp {
-      margin: 20px 20px 0 20px;
       flex-direction: row;
       flex-wrap: nowrap;
       -moz-column-gap: 3vw;
@@ -159,30 +120,12 @@
   padding: 50px 20px 30px 20px;
 
   @include mix.tablet-resp {
-    width: 80vw;
-    margin: 0 auto;
     position: relative;
-    padding-left: 0;
-    padding-right: 0;
+    top: 30px;
   }
 
   @include mix.desktop-resp {
-    width: 80vw;
-    margin: 0 auto;
     position: relative;
-    padding-left: 0;
-    padding-right: 0;
-    max-width: var.$max-width-responsive;
-  }
-
-  h2 {
-    @include mix.tablet-resp {
-      margin: 0 20px;
-    }
-
-    @include mix.desktop-resp {
-      margin: 0 20px;
-    }
   }
 
   .places__list {
@@ -191,12 +134,7 @@
     flex-direction: column;
     row-gap: 20px;
 
-    @include mix.tablet-resp {
-      margin: 20px 20px 0 20px;
-    }
-
     @include mix.desktop-resp {
-      margin: 20px 20px 0 20px;
       flex-direction: row;
       width: auto;
       flex-wrap: wrap;
@@ -233,19 +171,28 @@
     right: 10px;
   }
 
-  img {
-    height: var.$tile-img-height;
-    width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    border-radius: var.$tile-border-radius var.$tile-border-radius 0 0;
-  }
+
 
   &__content {
     height: 100%;
     width: 100%;
     flex-direction: column;
     @include mix.flex(space-between, start);
+
+    &__img {
+      height: var.$tile-img-height;
+      width: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center;
+        object-position: center;
+        border-radius: var.$tile-border-radius var.$tile-border-radius 0 0;
+      }
+    }
 
     p {
       font-size: 17px;

@@ -20,7 +20,18 @@
   padding-inline-end: 0;
 }
 
+main {
+  @include mix.tablet-resp {
+    width: 80vw;
+    margin: 0 auto;
+  }
 
+  @include mix.desktop-resp {
+    width: 80vw;
+    max-width: var.$max-width-responsive;
+    margin: 0 auto;
+  }
+}
 
 p {
   font-weight: 300;

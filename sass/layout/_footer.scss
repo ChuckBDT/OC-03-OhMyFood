@@ -4,27 +4,26 @@
 footer {
   width: auto;
   height: 200px;
-  padding: 0 1.5em;
   background-color: var.$main-color--d2;
   color: white;
+
 
   @include mix.tablet-resp {
     position: relative;
     width: 80vw;
     margin: 0 auto;
     border-radius: 0 0 40px 40px;
-    padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    top: 30px;
   }
 
   @include mix.desktop-resp {
     position: relative;
     width: 80vw;
     margin: 0 auto;
-    padding: 0;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -34,7 +33,7 @@ footer {
   .logo {
     font-family: "Shrikhand";
     font-size: 18px;
-    padding: 25px 0;
+    padding: 25px 20px;
 
     @include mix.tablet-resp {
       text-align: center;
@@ -51,12 +50,14 @@ footer {
     flex-direction: column;
     height: 95px;
     justify-content: space-between;
+    padding: 0 20px;
 
     @include mix.tablet-resp {
       flex-direction: row;
-      width: 100%;
-      justify-content: space-evenly;
+      width: auto;
+      justify-content: space-between;
       height: 50px;
+
 
     }
 

@@ -18,132 +18,166 @@
         <p>ohmyfood</p>
     </div>
     <div id="background-slideshow">
-        <img src="./assets/slideshow/jakub-kapusnak-4f4YZfDMLeU-unsplash.webp" alt="">
-        <img src="./assets/slideshow/jay-wennington-N_Y88TWmGwA-unsplash.webp" alt="">
+        <img src="./assets/slideshow/jakub-kapusnak-4f4YZfDMLeU-unsplash.webp"
+            alt="Table vue de dessus comprenant différents plats coréens">
+        <img src="./assets/slideshow/dan-gold-E6HjQaB7UEA-unsplash.webp"
+            alt="Table vue de dessus avec quatre personnes mangeant des burgers">
     </div>
 
     <header>
-        <img src="assets/logos/ohmyfood.png" alt="">
+        <img src="assets/logos/ohmyfood.png" alt="Logo OhMyFood">
     </header>
-    <div class="banner">
-        <div class="location">
-            <p><i class="fa-solid fa-location-dot"></i></p>
-            <form action="get">
-                <input type="search" placeholder="Paris, Belleville">
-            </form>
-        </div>
-        <div class="discover">
-            <h2>Réservez le menu qui vous convient</h2>
-            <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-            <button class="gradient-rounded-btn">Explorer nos restaurants</button>
-        </div>
-    </div>
-    <section id="functioning">
-        <h2>Fonctionnement</h2>
-        <div class="functioning__steps">
-            <div class="step-tile">
-                <p class="step-tile__order">1</p>
-                <i class="step-tile__icon fa-solid fa-mobile-screen-button"></i>
-                <p class="step-tile__text">Choisissez un restaurant</p>
+    <main>
+        <div class="banner">
+            <div class="location">
+                <p><i class="fa-solid fa-location-dot"></i></p>
+                <form action="get">
+                    <input type="search" placeholder="Paris, Belleville">
+                </form>
             </div>
-            <div class="step-tile">
-                <p class="step-tile__order">2</p>
-                <i class="step-tile__icon fa-solid fa-list-ul"></i>
-                <p class="step-tile__text">Composez votre menu</p>
-            </div>
-            <div class="step-tile">
-                <p class="step-tile__order">3</p>
-                <i class="step-tile__icon fa-solid fa-store"></i>
-                <p class="step-tile__text">Dégustez au restaurant</p>
+            <div class="discover">
+                <h2>Réservez le menu qui vous convient</h2>
+                <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                <button class="gradient-rounded-btn">Explorer nos restaurants</button>
             </div>
         </div>
-    </section>
+        <section id="functioning">
+            <h2>Fonctionnement</h2>
+            <div class="functioning__steps">
+                <div class="step-tile">
+                    <p class="step-tile__order">1</p>
+                    <i class="step-tile__icon fa-solid fa-mobile-screen-button"></i>
+                    <p class="step-tile__text">Choisissez un restaurant</p>
+                </div>
+                <div class="step-tile">
+                    <p class="step-tile__order">2</p>
+                    <i class="step-tile__icon fa-solid fa-list-ul"></i>
+                    <p class="step-tile__text">Composez votre menu</p>
+                </div>
+                <div class="step-tile">
+                    <p class="step-tile__order">3</p>
+                    <i class="step-tile__icon fa-solid fa-store"></i>
+                    <p class="step-tile__text">Dégustez au restaurant</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="places">
-        <h2>Restaurants</h2>
-        <div class="places__list">
-            <div class="restaurant rounded-shadowed-tile">
-                <span class="span-lightcolor-tile">Nouveau</span>
-                <a href="./lapalettedugout.html">
-                    <div class="restaurant__content">
-                        <img src="assets/restaurants/LaPaletteDuGout.webp" alt="">
-                        <div class="restaurant__content__title">
-                            <h3>La palette du goût</h3>
-                            <p>Ménilmontant</p>
+        <section id="places">
+            <h2>Restaurants</h2>
+            <div class="places__list">
+                <div class="restaurant rounded-shadowed-tile">
+                    <span class="span-lightcolor-tile">Nouveau</span>
+                    <a href="./lapalettedugout.html">
+                        <div class="restaurant__content">
+                            <picture class="restaurant__content__img">
+                                <source srcset="assets/restaurants/small/LaPaletteDuGout.webp"
+                                    media="(max-width: 440px)">
+                                <source srcset="assets/restaurants/medium/LaPaletteDuGout.webp"
+                                    media="(max-width: 880px)">
+                                <source srcset="assets/restaurants/large/LaPaletteDuGout.webp">
+                                <img src="assets/restaurants/fallback/LaPaletteDuGout.jpg"
+                                    alt="Longue table de restaurant avec vue sur un plat gastronomique">
+                            </picture>
+                            <div class="restaurant__content__title">
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="like-btn">
+                        <div class="like-btn__main">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="like-btn__background">
+                            <i class="fa-regular fa-heart"></i>
                         </div>
                     </div>
-                </a>
-                <div class="like-btn">
-                    <div class="like-btn__main">
-                        <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="restaurant rounded-shadowed-tile">
+                    <span class="span-lightcolor-tile">Nouveau</span>
+                    <a href="./lanoteenchantee.html">
+                        <div class="restaurant__content">
+                            <picture class="restaurant__content__img">
+                                <source srcset="assets/restaurants/small/LaNoteEnchantee.webp"
+                                    media="(max-width: 440px)">
+                                <source srcset="assets/restaurants/medium/LaNoteEnchantee.webp"
+                                    media="(max-width: 880px)">
+                                <source srcset="assets/restaurants/large/LaNoteEnchantee.webp">
+                                <img src="assets/restaurants/fallback/LaNoteEnchantee.jpg"
+                                    alt="Table vue de dessus avec deux assiettes et une corbeille de pain">
+                            </picture>
+                            <div class="restaurant__content__title">
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="like-btn">
+                        <div class="like-btn__main">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="like-btn__background">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
                     </div>
-                    <div class="like-btn__background">
-                        <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="restaurant rounded-shadowed-tile">
+                    <span class="span-lightcolor-tile--hidden">Nouveau</span>
+                    <a href="./alafrancaise.html">
+                        <div class="restaurant__content">
+                            <picture class="restaurant__content__img">
+                                <source srcset="assets/restaurants/small/ALaFrancaise.webp" media="(max-width: 440px)">
+                                <source srcset="assets/restaurants/medium/ALaFrancaise.webp" media="(max-width: 880px)">
+                                <source srcset="assets/restaurants/large/ALaFrancaise.webp">
+                                <img src="assets/restaurants/fallback/ALaFrancaise.jpg"
+                                    alt="Vue sur une assiette composée d'un toast à la mozzarella">
+                            </picture>
+                            <div class="restaurant__content__title">
+                                <h3>À la française</h3>
+                                <p>Cité Rouge</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="like-btn">
+                        <div class="like-btn__main">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="like-btn__background">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="restaurant rounded-shadowed-tile">
+                    <span class="span-lightcolor-tile--hidden">Nouveau</span>
+                    <a href="./ledelicedessens.html">
+                        <div class="restaurant__content">
+                            <picture class="restaurant__content__img">
+                                <source srcset="assets/restaurants/small/LeDeliceDesSens.webp"
+                                    media="(max-width: 440px)">
+                                <source srcset="assets/restaurants/medium/LeDeliceDesSens.webp"
+                                    media="(max-width: 880px)">
+                                <source srcset="assets/restaurants/large/LeDeliceDesSens.webp">
+                                <img src="assets/restaurants/fallback/LeDeliceDesSens.jpg"
+                                    alt="Vue sur des assiettes rectangulaires comprenant un poisson cuit">
+                            </picture>
+                            <div class="restaurant__content__title">
+                                <h3>Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="like-btn">
+                        <div class="like-btn__main">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="like-btn__background">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="restaurant rounded-shadowed-tile">
-                <span class="span-lightcolor-tile">Nouveau</span>
-                <a href="./lanoteenchantee.html">
-                    <div class="restaurant__content">
-                        <img src="assets/restaurants/LaNoteEnchantee.webp" alt="">
-                        <div class="restaurant__content__title">
-                            <h3>La note enchantée</h3>
-                            <p>Charonne</p>
-                        </div>
-                    </div>
-                </a>
-                <div class="like-btn">
-                    <div class="like-btn__main">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-                    <div class="like-btn__background">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="restaurant rounded-shadowed-tile">
-                <span class="span-lightcolor-tile--hidden">Nouveau</span>
-                <a href="./alafrancaise.html">
-                    <div class="restaurant__content">
-                        <img src="assets/restaurants/ALaFrancaise.webp" alt="">
-                        <div class="restaurant__content__title">
-                            <h3>À la française</h3>
-                            <p>Cité Rouge</p>
-                        </div>
-                    </div>
-                </a>
-                <div class="like-btn">
-                    <div class="like-btn__main">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-                    <div class="like-btn__background">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="restaurant rounded-shadowed-tile">
-                <span class="span-lightcolor-tile--hidden">Nouveau</span>
-                <a href="./ledelicedessens.html">
-                    <div class="restaurant__content">
-                        <img src="assets/restaurants/LeDeliceDesSens.webp" alt="">
-                        <div class="restaurant__content__title">
-                            <h3>Le délice des sens</h3>
-                            <p>Folie-Méricourt</p>
-                        </div>
-                    </div>
-                </a>
-                <div class="like-btn">
-                    <div class="like-btn__main">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-                    <div class="like-btn__background">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
     <footer>
         <div class="logo">ohmyfood</div>
         <ul>

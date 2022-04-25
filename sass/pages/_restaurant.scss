@@ -1,88 +1,81 @@
 @use "../utils/mixins"as mix;
 @use "../utils/variables"as var;
 
-.top-img {
-    width: 100vw;
-    z-index: 0;
+.bg-img {
+    img {
+        display: none;
+        width: 100vw;
+        z-index: 0;
 
-    @include mix.tablet-resp {
-        position: fixed;
-        height: 100vh;
-        -o-object-fit: cover;
-        object-fit: cover;
-        -o-object-position: center;
-        object-position: center;
-        top: 0px;
-        filter: blur(10px);
+        @include mix.tablet-resp {
+            display: block;
+            position: fixed;
+            height: 100vh;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -o-object-position: center;
+            object-position: center;
+            top: 0px;
+            -webkit-filter: blur(10px);
+            filter: blur(10px);
+        }
+
+        @include mix.desktop-resp {
+            display: block;
+            position: fixed;
+            height: 100vh;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -o-object-position: center;
+            object-position: center;
+            top: 0px;
+            -webkit-filter: blur(10px);
+            filter: blur(10px);
+        }
     }
-
-    @include mix.desktop-resp {
-        position: fixed;
-        height: 100vh;
-        -o-object-fit: cover;
-        object-fit: cover;
-        -o-object-position: center;
-        object-position: center;
-        top: 0px;
-        filter: blur(10px);
-    }
-
 }
 
 .inside-img {
-    width: 80vw;
-    margin: 0 auto;
-    border-radius: 0;
-    padding: 0px;
-    top: initial;
+    position: relative;
+    display: block;
+    width: 100%;
     height: 300px;
-    display: none;
 
     @include mix.tablet-resp {
-        display: block;
-    }
-
-    @include mix.desktop-resp {
-        display: block;
-        width: 80vw;
-        margin: 0 auto;
-        max-width: var.$max-width-responsive;
+        top: 30px;
     }
 
     img {
         height: 100%;
         width: 100%;
+        -o-object-fit: cover;
         object-fit: cover;
+        -o-object-position: center;
         object-position: center;
     }
 }
+
 
 .menu {
     background-color: var.$main-color;
     border-radius: 40px 40px 0 0;
     position: relative;
     z-index: 1;
-    top: -60px;
-
-    padding: 0 20px;
     margin-bottom: -60px;
+    top: -60px;
+    padding: 0 20px;
 
     @include mix.tablet-resp {
         @include mix.btn-shadow-without-hover;
-        width: 80vw;
-        margin: 0 auto;
         border-radius: 0;
-        padding: 0px;
-        top: 0px;
+        top: 30px;
+        margin-bottom: 0;
     }
 
     @include mix.desktop-resp {
-        width: 80vw;
-        margin: 0 auto;
-        max-width: var.$max-width-responsive;
         border-radius: 0;
-        padding: 0px;
         top: 0px;
+        margin-bottom: 0;
 
     }
 
@@ -95,12 +88,12 @@
 
         @include mix.tablet-resp {
             @include mix.like-btn($font-size:28px, $top:33px, $bottom:unset, $left:unset, $right: 0px, $bg-size:40px);
-            margin: 0 20px;
+
         }
 
         @include mix.desktop-resp {
             @include mix.like-btn($font-size:28px, $top:33px, $bottom:unset, $left:unset, $right: 0px, $bg-size:40px);
-            margin: 0 20px;
+
         }
 
         h1 {
@@ -115,12 +108,7 @@
 
 .categories {
     @include mix.desktop-resp {
-        @include mix.flex(space-between, center);
-        width: auto;
-        margin: 0 20px;
-
-
-
+        @include mix.flex(space-between, start);
     }
 
 }
@@ -132,7 +120,7 @@
     row-gap: 15px;
 
     @include mix.tablet-resp {
-        margin: 15px 20px 40px 20px;
+        margin: 15px 0 40px 0;
     }
 
     @include mix.desktop-resp {

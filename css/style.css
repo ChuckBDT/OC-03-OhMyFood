@@ -228,6 +228,20 @@ template {
   padding-inline-end: 0;
 }
 
+@media screen and (min-width: 440px) and (max-width: 1024px) {
+  main {
+    width: 80vw;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main {
+    width: 80vw;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
 p {
   font-weight: 300;
   font-size: 18px;
@@ -271,7 +285,6 @@ header img {
 footer {
   width: auto;
   height: 200px;
-  padding: 0 1.5em;
   background-color: #393939;
   color: white;
 }
@@ -281,11 +294,11 @@ footer {
     width: 80vw;
     margin: 0 auto;
     border-radius: 0 0 40px 40px;
-    padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    top: 30px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -293,7 +306,6 @@ footer {
     position: relative;
     width: 80vw;
     margin: 0 auto;
-    padding: 0;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -303,7 +315,7 @@ footer {
 footer .logo {
   font-family: "Shrikhand";
   font-size: 18px;
-  padding: 25px 0;
+  padding: 25px 20px;
 }
 @media screen and (min-width: 440px) and (max-width: 1024px) {
   footer .logo {
@@ -321,12 +333,13 @@ footer ul {
   flex-direction: column;
   height: 95px;
   justify-content: space-between;
+  padding: 0 20px;
 }
 @media screen and (min-width: 440px) and (max-width: 1024px) {
   footer ul {
     flex-direction: row;
-    width: 100%;
-    justify-content: space-evenly;
+    width: auto;
+    justify-content: space-between;
     height: 50px;
   }
 }
@@ -679,15 +692,6 @@ footer ul a:link {
 @media screen and (min-width: 440px) and (max-width: 1024px) {
   .banner {
     top: 30px;
-    width: 80vw;
-    margin: 0 auto;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .banner {
-    width: 80vw;
-    margin: 0 auto;
-    max-width: 1440px;
   }
 }
 .banner .location {
@@ -743,46 +747,22 @@ footer ul a:link {
     padding: 30px 30px 20px 30px;
   }
 }
-.banner .discover__btn {
-  height: 50px;
-  width: 220px;
-  margin: 20px 0;
-  cursor: pointer;
-}
 
 #functioning {
   padding: 50px 20px 30px 20px;
 }
 @media screen and (min-width: 440px) and (max-width: 1024px) {
   #functioning {
-    background-color: white;
     position: relative;
-    width: 80vw;
-    margin: 0 auto;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 80px;
+    background-color: white;
+    top: 30px;
+    padding-top: 50px;
   }
 }
 @media screen and (min-width: 1024px) {
   #functioning {
     background-color: white;
     position: relative;
-    width: 80vw;
-    margin: 0 auto;
-    padding-left: 0;
-    padding-right: 0;
-    max-width: 1440px;
-  }
-}
-@media screen and (min-width: 440px) and (max-width: 1024px) {
-  #functioning h2 {
-    margin: 0 20px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  #functioning h2 {
-    margin: 0 20px;
   }
 }
 #functioning .functioning__steps {
@@ -793,14 +773,8 @@ footer ul a:link {
   flex-direction: column;
   justify-content: space-between;
 }
-@media screen and (min-width: 440px) and (max-width: 1024px) {
-  #functioning .functioning__steps {
-    margin: 20px 20px 0 20px;
-  }
-}
 @media screen and (min-width: 1024px) {
   #functioning .functioning__steps {
-    margin: 20px 20px 0 20px;
     flex-direction: row;
     flex-wrap: nowrap;
     -moz-column-gap: 3vw;
@@ -817,31 +791,13 @@ footer ul a:link {
 }
 @media screen and (min-width: 440px) and (max-width: 1024px) {
   #places {
-    width: 80vw;
-    margin: 0 auto;
     position: relative;
-    padding-left: 0;
-    padding-right: 0;
+    top: 30px;
   }
 }
 @media screen and (min-width: 1024px) {
   #places {
-    width: 80vw;
-    margin: 0 auto;
     position: relative;
-    padding-left: 0;
-    padding-right: 0;
-    max-width: 1440px;
-  }
-}
-@media screen and (min-width: 440px) and (max-width: 1024px) {
-  #places h2 {
-    margin: 0 20px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  #places h2 {
-    margin: 0 20px;
   }
 }
 #places .places__list {
@@ -852,14 +808,8 @@ footer ul a:link {
   flex-direction: column;
   row-gap: 20px;
 }
-@media screen and (min-width: 440px) and (max-width: 1024px) {
-  #places .places__list {
-    margin: 20px 20px 0 20px;
-  }
-}
 @media screen and (min-width: 1024px) {
   #places .places__list {
-    margin: 20px 20px 0 20px;
     flex-direction: row;
     width: auto;
     flex-wrap: wrap;
@@ -934,13 +884,6 @@ footer ul a:link {
   top: 10px;
   right: 10px;
 }
-.restaurant img {
-  height: 170px;
-  width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  border-radius: 15px 15px 0 0;
-}
 .restaurant__content {
   height: 100%;
   width: 100%;
@@ -948,6 +891,19 @@ footer ul a:link {
   display: flex;
   justify-content: space-between;
   align-items: start;
+}
+.restaurant__content__img {
+  height: 170px;
+  width: 100%;
+}
+.restaurant__content__img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  border-radius: 15px 15px 0 0;
 }
 .restaurant__content p {
   font-size: 17px;
@@ -963,12 +919,14 @@ footer ul a:link {
   color: black;
 }
 
-.top-img {
+.bg-img img {
+  display: none;
   width: 100vw;
   z-index: 0;
 }
 @media screen and (min-width: 440px) and (max-width: 1024px) {
-  .top-img {
+  .bg-img img {
+    display: block;
     position: fixed;
     height: 100vh;
     -o-object-fit: cover;
@@ -976,11 +934,13 @@ footer ul a:link {
     -o-object-position: center;
     object-position: center;
     top: 0px;
+    -webkit-filter: blur(10px);
     filter: blur(10px);
   }
 }
 @media screen and (min-width: 1024px) {
-  .top-img {
+  .bg-img img {
+    display: block;
     position: fixed;
     height: 100vh;
     -o-object-fit: cover;
@@ -988,36 +948,28 @@ footer ul a:link {
     -o-object-position: center;
     object-position: center;
     top: 0px;
+    -webkit-filter: blur(10px);
     filter: blur(10px);
   }
 }
 
 .inside-img {
-  width: 80vw;
-  margin: 0 auto;
-  border-radius: 0;
-  padding: 0px;
-  top: initial;
+  position: relative;
+  display: block;
+  width: 100%;
   height: 300px;
-  display: none;
 }
 @media screen and (min-width: 440px) and (max-width: 1024px) {
   .inside-img {
-    display: block;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .inside-img {
-    display: block;
-    width: 80vw;
-    margin: 0 auto;
-    max-width: 1440px;
+    top: 30px;
   }
 }
 .inside-img img {
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
 }
 
@@ -1026,28 +978,23 @@ footer ul a:link {
   border-radius: 40px 40px 0 0;
   position: relative;
   z-index: 1;
+  margin-bottom: -60px;
   top: -60px;
   padding: 0 20px;
-  margin-bottom: -60px;
 }
 @media screen and (min-width: 440px) and (max-width: 1024px) {
   .menu {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    width: 80vw;
-    margin: 0 auto;
     border-radius: 0;
-    padding: 0px;
-    top: 0px;
+    top: 30px;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1024px) {
   .menu {
-    width: 80vw;
-    margin: 0 auto;
-    max-width: 1440px;
     border-radius: 0;
-    padding: 0px;
     top: 0px;
+    margin-bottom: 0;
   }
 }
 .menu__header {
@@ -1099,9 +1046,6 @@ footer ul a:link {
   color: black;
 }
 @media screen and (min-width: 440px) and (max-width: 1024px) {
-  .menu__header {
-    margin: 0 20px;
-  }
   .menu__header .like-btn {
     font-size: 28px;
     overflow: visible;
@@ -1146,9 +1090,6 @@ footer ul a:link {
   }
 }
 @media screen and (min-width: 1024px) {
-  .menu__header {
-    margin: 0 20px;
-  }
   .menu__header .like-btn {
     font-size: 28px;
     overflow: visible;
@@ -1204,9 +1145,7 @@ footer ul a:link {
   .categories {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: auto;
-    margin: 0 20px;
+    align-items: start;
   }
 }
 
@@ -1220,7 +1159,7 @@ footer ul a:link {
 }
 @media screen and (min-width: 440px) and (max-width: 1024px) {
   .category {
-    margin: 15px 20px 40px 20px;
+    margin: 15px 0 40px 0;
   }
 }
 @media screen and (min-width: 1024px) {
